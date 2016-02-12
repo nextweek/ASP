@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://iplanet.oss.hawaiiantel.com/ht-one" name="ServiceResources" targetNamespace="http://iplanet.oss.hawaiiantel.com/ht-one" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:tns="http://iplanet.oss.hawaiiantel.com/ht-one" elementFormDefault="unqualified" targetNamespace="http://iplanet.oss.hawaiiantel.com/ht-one" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="ServiceInformation" type="tns:serviceInformation" />
+      <xs:element name="findByCircuitId" type="tns:findByCircuitId" />
+      <xs:element name="findByCircuitIdResponse" type="tns:findByCircuitIdResponse" />
+      <xs:element name="findByCustomerAccount" type="tns:findByCustomerAccount" />
+      <xs:element name="findByCustomerAccountResponse" type="tns:findByCustomerAccountResponse" />
+      <xs:element name="findByServiceTn" type="tns:findByServiceTn" />
+      <xs:element name="findByServiceTnResponse" type="tns:findByServiceTnResponse" />
+      <xs:complexType name="findByCustomerAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findByCustomerAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceInformation" type="tns:serviceInformation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="serviceInformation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:long" />
+          <xs:element minOccurs="0" name="circuitId" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="accessType" type="xs:string" />
+          <xs:element minOccurs="0" name="ipType" type="xs:string" />
+          <xs:element minOccurs="0" name="ipRanges">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="ipRange" type="tns:ipRange" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="networkElements">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="networkElement" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="serviceType" type="xs:string" />
+          <xs:element minOccurs="0" name="vlan" type="xs:string" />
+          <xs:element minOccurs="0" name="meetPoint" type="xs:string" />
+          <xs:element minOccurs="0" name="tn" type="xs:string" />
+          <xs:element minOccurs="0" name="downloadBandwidth" type="xs:long" />
+          <xs:element minOccurs="0" name="uploadBandwidth" type="xs:long" />
+          <xs:element minOccurs="0" name="productName" type="xs:string" />
+          <xs:element minOccurs="0" name="maxUp" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ipRange">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ipAddresses">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="ipAddress" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="gateway" type="xs:string" />
+          <xs:element minOccurs="0" name="netmask" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findByCircuitId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="circuitId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findByCircuitIdResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ServiceInformation" type="tns:serviceInformation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findByServiceTn">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tn" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findByServiceTnResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceInformation" type="tns:serviceInformation" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="findByCircuitIdResponse">
+    <wsdl:part name="parameters" element="ns1:findByCircuitIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="findByCustomerAccount">
+    <wsdl:part name="parameters" element="ns1:findByCustomerAccount" />
+  </wsdl:message>
+  <wsdl:message name="findByServiceTn">
+    <wsdl:part name="parameters" element="ns1:findByServiceTn" />
+  </wsdl:message>
+  <wsdl:message name="findByCircuitId">
+    <wsdl:part name="parameters" element="ns1:findByCircuitId" />
+  </wsdl:message>
+  <wsdl:message name="findByCustomerAccountResponse">
+    <wsdl:part name="parameters" element="ns1:findByCustomerAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="findByServiceTnResponse">
+    <wsdl:part name="parameters" element="ns1:findByServiceTnResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceResources">
+    <wsdl:operation name="findByCustomerAccount">
+      <wsdl:input name="findByCustomerAccount" message="ns1:findByCustomerAccount" />
+      <wsdl:output name="findByCustomerAccountResponse" message="ns1:findByCustomerAccountResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="findByCircuitId">
+      <wsdl:input name="findByCircuitId" message="ns1:findByCircuitId" />
+      <wsdl:output name="findByCircuitIdResponse" message="ns1:findByCircuitIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="findByServiceTn">
+      <wsdl:input name="findByServiceTn" message="ns1:findByServiceTn" />
+      <wsdl:output name="findByServiceTnResponse" message="ns1:findByServiceTnResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,132 @@
+﻿html {
+    background: url(../Images/introductory_bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+}
+
+body {
+    background-color: transparent;
+}
+
+#loginContainer { 
+    position: absolute; 
+    top: 30%; 
+    left: 2%; 
+    height: 16em /*38%*/; 
+    width: 40%; 
+    min-width: 23em;
+    background: rgba(255,255,255, 0.3);
+    border: none; 
+    -webkit-border-radius: 10px; 
+    -ms-border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    border-radius: 25px; 
+    z-index: 100; 
+}
+
+#htLogo {
+   
+    
+    float:left;
+}
+
+#textBoxDiv {
+    margin-left: 4%;
+}
+
+.loginTxtBox {
+    border: 1px solid gray;
+    width: 65%;
+    height: 2.5em;
+    padding-left: 2%;
+    margin-top: 4%;
+    font-size: 1em;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .loginTxtBox:hover {
+        border-color: #003366;
+    }
+
+    .loginTxtBox:focus {
+    outline: none;
+}
+
+.line {
+    border-bottom-style: dashed;
+    border-color: #d4d1d1;
+    margin-left: 0;
+}
+
+.loginBtn { 
+    position: absolute; 
+    margin-left: 3%; 
+    top: 50%; 
+    left: 73%; 
+    height: 70px; 
+    width: 70px; 
+    background-color: #0066CC; 
+    border-radius: 18px; 
+    box-shadow: 3px 3px 3px #003366;
+}
+
+    .loginBtn:active {
+        color: #000000;
+        -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+        box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+        -webkit-transform: scale(0.9, 0.9);
+        -webkit-transition-duration: 50ms;
+        -webkit-transition-timing-function: ease-out;
+        text-decoration:none;
+    }
+   .arrow:focus{
+    border: none;
+    outline: none;    
+}
+
+    .loginBtn:hover {
+        background-color: #7DE5FA;
+        cursor: pointer;
+    }
+
+.arrow {
+    width: 55px;
+    height: 55px;
+    margin-top: 9%;
+    margin-left: 15%;
+}
+
+#errorContainer {
+    width: 100%; 
+    z-index: 100;
+    position:relative;
+    top:6px;
+    text-shadow: 1px 1px 1px black ;
+    text-align:center;
+    color:red;
+    font-family: 'Arial', 'Segoe UI', 'sans-serif';
+    font-style:italic ;
+    font-size:1em;
+}
+
+.floatRight {
+float:right;
+}
+/*this is for responsive design (min-width: 100px) and */
+@media only screen and (max-width: 859px) {
+    #loginContainer {
+    top:35%;
+    }
+   
+}
+
+@media only screen and (min-width: 860px) and (max-width: 928px) {
+
+}

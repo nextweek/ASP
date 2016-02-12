@@ -1,0 +1,81 @@
+﻿    html {
+        background: url(/Images/beach.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        z-index:-1;
+    }
+
+    .myContainer {
+        z-index:100;
+        margin-top:40%;
+        margin-left:3%;
+        margin-top: 28%; 
+        width: 60%;
+        background: rgba(59, 69, 73, 0.4);
+        -webkit-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 25px;
+        border: 2px solid #BDBDBD;
+        
+    }
+
+    #inputContainer {
+        height:95pt;
+    }
+
+    .line {
+        border-bottom-style: dashed;
+        border-color: #d4d1d1;
+        margin-left:-10px;
+    
+    }
+
+    #htOneLogo {
+        margin-bottom: 3%;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .loginBtn {
+       background-color: #0fd3fa;
+       height: 65px;
+       width: 75px;
+       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(184,225,252,1)), color-stop(10%,rgba(169,210,243,1)), color-stop(25%,rgba(144,186,228,1)), color-stop(37%,rgba(144,188,234,1)), color-stop(50%,rgba(144,191,240,1)), color-stop(51%,rgba(107,168,229,1)), color-stop(83%,rgba(162,218,245,1)), color-stop(100%,rgba(189,243,253,1)));
+       border-radius: 10px;
+       border:1px solid #BDBDBD;
+    }
+
+    .loginBtn:active {
+        -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+        box-shadow:0px 6px 10px rgba(0,0,0,0.3);
+        -webkit-transform: scale(0.9, 0.9); 
+        -webkit-transition-duration: 50ms;
+        -webkit-transition-timing-function: ease-out;
+    }
+
+    .loginBtn:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(179,220,237,1)), color-stop(50%,rgba(41,184,229,1)), color-stop(100%,rgba(188,224,238,1)));
+        cursor:pointer;
+     
+    }
+
+     
+    .arrow {
+        padding:2px 0px 0px 12px;
+        width:74px;
+        height:60px;
+        z-index:0;
+    }
+
+    .lineBot {
+        border-bottom:2px dashed #BDBDBD;
+    }
+
+
+    .results {
+        z-index:100;
+    }

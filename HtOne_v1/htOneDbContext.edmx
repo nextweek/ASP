@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HTONEModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="HTONEModelStoreContainer">
+          <EntitySet Name="SEQUENCE_TBL" EntityType="HTONEModel.Store.SEQUENCE_TBL" store:Type="Tables" store:Schema="HTONE" store:Name="SEQUENCE_TBL">
+            <DefiningQuery>SELECT 
+      [SEQUENCE_TBL].[TABLE_NAME] AS [TABLE_NAME], 
+      [SEQUENCE_TBL].[TABLE_NEXT_ID] AS [TABLE_NEXT_ID]
+      FROM [HTONE].[SEQUENCE_TBL] AS [SEQUENCE_TBL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TICKER_MESSAGE_STATUS" EntityType="HTONEModel.Store.TICKER_MESSAGE_STATUS" store:Type="Tables" Schema="HTONE" />
+          <EntitySet Name="TICKER_MESSAGE_TBL" EntityType="HTONEModel.Store.TICKER_MESSAGE_TBL" store:Type="Tables" Schema="HTONE" />
+          <EntitySet Name="TICKER_MESSAGE_TYPE" EntityType="HTONEModel.Store.TICKER_MESSAGE_TYPE" store:Type="Tables" Schema="HTONE" />
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'HTONE.HTONE.SEQUENCE_TBL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SEQUENCE_TBL">
+          <Key>
+            <PropertyRef Name="TABLE_NAME" />
+            <PropertyRef Name="TABLE_NEXT_ID" />
+          </Key>
+          <Property Name="TABLE_NAME" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TABLE_NEXT_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TICKER_MESSAGE_STATUS">
+          <Key>
+            <PropertyRef Name="MSG_STATUS" />
+          </Key>
+          <Property Name="MSG_STATUS" Type="smallint" Nullable="false" />
+          <Property Name="MSG_STATUS_DESCR" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TICKER_MESSAGE_TBL">
+          <Key>
+            <PropertyRef Name="MSG_ID" />
+          </Key>
+          <Property Name="MSG_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MSG_DESCR" Type="varchar" MaxLength="256" />
+          <Property Name="MSG_TYPE" Type="int" Nullable="false" />
+          <Property Name="MSG_STATUS" Type="int" Nullable="false" />
+          <Property Name="ADDED_ON" Type="datetime" Nullable="false" />
+          <Property Name="ADDED_BY" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MODIFIED_ON" Type="datetime" />
+          <Property Name="MODIFIED_BY" Type="varchar" MaxLength="50" />
+          <Property Name="DELTETED_ON" Type="date" />
+          <Property Name="DELETED_BY" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TICKER_MESSAGE_TYPE">
+          <Key>
+            <PropertyRef Name="MSG_TYPE" />
+          </Key>
+          <Property Name="MSG_TYPE" Type="tinyint" Nullable="false" />
+          <Property Name="MSG_TYPE_DESCR" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Function Name="GET_NEXT_ID_FUNC" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="HTONE">
+          <Parameter Name="TableName" Type="varchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HTONEModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HTONEEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="SEQUENCE_TBL" EntityType="HTONEModel.SEQUENCE_TBL" />
+          <EntitySet Name="TICKER_MESSAGE_STATUS" EntityType="HTONEModel.TICKER_MESSAGE_STATUS" />
+          <EntitySet Name="TICKER_MESSAGE_TBL" EntityType="HTONEModel.TICKER_MESSAGE_TBL" />
+          <EntitySet Name="TICKER_MESSAGE_TYPE" EntityType="HTONEModel.TICKER_MESSAGE_TYPE" />
+        </EntityContainer>
+        <EntityType Name="SEQUENCE_TBL">
+          <Key>
+            <PropertyRef Name="TABLE_NAME" />
+            <PropertyRef Name="TABLE_NEXT_ID" />
+          </Key>
+          <Property Name="TABLE_NAME" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TABLE_NEXT_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TICKER_MESSAGE_STATUS">
+          <Key>
+            <PropertyRef Name="MSG_STATUS" />
+          </Key>
+          <Property Name="MSG_STATUS" Type="Int16" Nullable="false" />
+          <Property Name="MSG_STATUS_DESCR" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TICKER_MESSAGE_TBL">
+          <Key>
+            <PropertyRef Name="MSG_ID" />
+          </Key>
+          <Property Name="MSG_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MSG_DESCR" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="MSG_TYPE" Type="Int16" Nullable="false" />
+          <Property Name="MSG_STATUS" Type="Int16" Nullable="false" />
+          <Property Name="ADDED_ON" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ADDED_BY" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MODIFIED_ON" Type="DateTime" Precision="3" />
+          <Property Name="MODIFIED_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DELTETED_ON" Type="DateTime" Precision="0" />
+          <Property Name="DELETED_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TICKER_MESSAGE_TYPE">
+          <Key>
+            <PropertyRef Name="MSG_TYPE" />
+          </Key>
+          <Property Name="MSG_TYPE" Type="Byte" Nullable="false" />
+          <Property Name="MSG_TYPE_DESCR" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HTONEModelStoreContainer" CdmEntityContainer="HTONEEntities">
+          <EntitySetMapping Name="SEQUENCE_TBL">
+            <EntityTypeMapping TypeName="HTONEModel.SEQUENCE_TBL">
+              <MappingFragment StoreEntitySet="SEQUENCE_TBL">
+                <ScalarProperty Name="TABLE_NAME" ColumnName="TABLE_NAME" />
+                <ScalarProperty Name="TABLE_NEXT_ID" ColumnName="TABLE_NEXT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TICKER_MESSAGE_STATUS">
+            <EntityTypeMapping TypeName="HTONEModel.TICKER_MESSAGE_STATUS">
+              <MappingFragment StoreEntitySet="TICKER_MESSAGE_STATUS">
+                <ScalarProperty Name="MSG_STATUS" ColumnName="MSG_STATUS" />
+                <ScalarProperty Name="MSG_STATUS_DESCR" ColumnName="MSG_STATUS_DESCR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TICKER_MESSAGE_TBL">
+            <EntityTypeMapping TypeName="HTONEModel.TICKER_MESSAGE_TBL">
+              <MappingFragment StoreEntitySet="TICKER_MESSAGE_TBL">
+                <ScalarProperty Name="MSG_ID" ColumnName="MSG_ID" />
+                <ScalarProperty Name="MSG_DESCR" ColumnName="MSG_DESCR" />
+                <ScalarProperty Name="MSG_TYPE" ColumnName="MSG_TYPE" />
+                <ScalarProperty Name="MSG_STATUS" ColumnName="MSG_STATUS" />
+                <ScalarProperty Name="ADDED_ON" ColumnName="ADDED_ON" />
+                <ScalarProperty Name="ADDED_BY" ColumnName="ADDED_BY" />
+                <ScalarProperty Name="MODIFIED_ON" ColumnName="MODIFIED_ON" />
+                <ScalarProperty Name="MODIFIED_BY" ColumnName="MODIFIED_BY" />
+                <ScalarProperty Name="DELTETED_ON" ColumnName="DELTETED_ON" />
+                <ScalarProperty Name="DELETED_BY" ColumnName="DELETED_BY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TICKER_MESSAGE_TYPE">
+            <EntityTypeMapping TypeName="HTONEModel.TICKER_MESSAGE_TYPE">
+              <MappingFragment StoreEntitySet="TICKER_MESSAGE_TYPE">
+                <ScalarProperty Name="MSG_TYPE" ColumnName="MSG_TYPE" />
+                <ScalarProperty Name="MSG_TYPE_DESCR" ColumnName="MSG_TYPE_DESCR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

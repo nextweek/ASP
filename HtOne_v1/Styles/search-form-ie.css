@@ -1,0 +1,250 @@
+﻿body {
+    font-family: Arial, "Segoe UI", sans-serif;
+    font-size: 100%;
+    overflow-x: hidden;
+    
+}
+
+header {
+width:100.5%;
+}
+#lblHTSearch {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+#search-content {
+    display: table;
+    text-align: center;
+    width: 98%;
+    margin-top: 2in;
+    font-weight: normal;
+    margin-left:3%;
+}
+
+input[type=text] {
+    width: 45em;
+    height: 3.1em;
+    padding-left: .5%;
+    padding-right: .10%;
+}
+
+#asOne {
+    border:1px solid gray;
+    /*width:46.1%;*/
+}
+
+#btnSearch {
+    border: 1px solid gray;
+    width:100px;
+    height:3.4em;
+    padding-left:2.3%;
+    color:black;
+    background: url('../Images/search.png') no-repeat scroll 15% 50% #D3D3D3;
+    background-size: 20px 20px;
+    border-radius: 0px 0px 0px 0px;
+    font-family:"Segoe UI", Tahoma, Arial;
+    font-weight:bold;
+   margin-left:2%;
+}
+
+/*#searchDropdown {
+    background: #DDD;
+    border:none;
+    height:3.1em;
+    padding-left:2px;
+    position:absolute;
+    float:left;
+    margin-top:1px;
+}*/
+
+#searchDropdown {
+    float: left;
+    position:absolute;
+    display:inline-block;
+    height: 2.58em;
+    overflow: hidden;
+    background: url('../Images/arrowDown.png') no-repeat 95% 50% #ddd;
+    border: 1px solid #ccc;
+}
+
+#searchDropdown select {
+   background: transparent;
+   /*width: 268px;*/
+   padding: 0;
+   margin: 0;
+   margin-top: 3px;
+   border: 0;
+   border-radius: 0;
+   height: 2.58em;
+   -webkit-appearance: none;
+}
+
+#HTSearchClear {    
+    position:relative;
+    background:url(../Images/Clear.png) no-repeat center center;
+    background-size: 32px 32px;
+    width:32px;
+    height:32px;
+    border:none;
+    left:-200px;
+    top:1px;
+    z-index:999;
+     
+}
+
+#imgDownArrow {
+    position:relative;
+    background:url(../Images/arrowDown.png) no-repeat center center;
+    background-size: 20px 20px;
+    width:25px;
+    height:30px;
+    border:none;
+    left:-180px;
+    z-index:999;
+    top:1px;
+
+}
+
+    #imgDownArrow:hover {
+        background-color:#e0e0e0;
+        cursor:pointer;
+        border-radius:0px;
+    }
+
+#HTSearchClear:disabled {
+    position:relative;
+    background:url(../Images/ClearDisabled.png) no-repeat center center;
+    background-size: 32px 32px;
+    width:32px;
+    height:32px;
+    border:none;
+    top:1px;
+    z-index:999;
+  
+}
+
+#HTLogo { /*HTLOGO Image*/
+    position: absolute;
+    margin-left: 2%;
+    margin-top: .3%;
+}
+
+#Gear { /*Gear Image*/
+    position: relative;
+    z-index: 3;
+    float: right;
+    padding-bottom: 0.2em;
+    margin-right:2%;
+}
+
+/*#txtHTSearch {
+    background-image: url(/Images/search.ico);
+    background-position: 98%;
+    background-repeat: no-repeat;
+}*/
+
+#radioButton label {
+    font-weight: normal;
+}
+
+/*Name Search*/
+#searchNameOptions
+{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.nameOption 
+{
+    margin-right: 2em;
+}
+
+#lbl_company 
+{
+    margin-left: -2.5em;
+}
+
+input#txt_CompName, input#txt_fName, input#txt_lName 
+{
+    width: 300px;
+    margin-bottom: 2%;
+}
+
+input#txtClearAccName,  input#weGo_accntName
+{
+    background-color: lightgrey;
+    color: black;
+}
+
+    input#txtClearAccName:disabled, #btnSearch:disabled {
+        color: #808080;
+    }
+
+input#txtClearAccName {
+    float: right;
+}
+
+#innerDiv
+{
+    width: 500px;
+    margin-left: 33%;
+}
+
+#lbl_errorMsg 
+{
+    color: red;
+    font-weight: bold;
+}
+
+input#weGo_accntName {
+    position:relative;
+    left:33%;
+    background: url('../Images/search.png') no-repeat scroll 15% 50% #D3D3D3;
+    background-size: 20px 20px;
+    width:19%;
+    padding-left:28.5px;
+}
+
+    input#weGo_accntName:hover {
+        border:1px solid black;
+    }
+
+
+/*Responsive---------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:219px) and (max-width:805px) {
+    #radioButton label {
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:805px) {
+    input[type=text] {
+        width: 60% /*35em*/;
+    }
+
+    #innerDiv {
+        margin-left: 16%;
+    }
+
+
+    input#txt_CompName, input#txt_fName, input#txt_lName {
+        width: 20em;
+    }
+}
+
+@media only screen and (min-width:219px) and (max-width:600px) {
+    input[type=text] {
+        width: 54% /*20em*/;
+    }
+
+
+    input#txt_CompName, input#txt_fName, input#txt_lName {
+        width: 40%;
+    }
+
+    #innerDiv {
+        margin-left: 0;
+        width: 100%;
+    }
+}

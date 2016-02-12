@@ -1,0 +1,1160 @@
+html {
+	height:100%;
+}
+body {
+	font-size:100% /*0.90em*/;
+	font-weight: normal;
+	font-family: Arial, "Segoe UI", sans-serif;
+	font-size-adjust:initial;  
+	overflow-x: hidden;
+	background-color: #E2E2E2;
+	padding:0; 
+	margin:0;
+	height:150%;
+}
+
+.link {
+	padding-left:3em;
+	color:#013ADF;
+	cursor:pointer;
+	font-size:1em;
+	font-weight: bold;
+	font-family: Arial, "Segoe UI", sans-serif;
+	font-size-adjust:initial;              
+}
+.link:hover {
+	text-decoration:underline;
+	color:#0040FF;
+}
+.headTitle {
+	font-size:1.3em;
+	font-weight:bolder;
+	color:#000000;
+}
+
+.container {
+	padding-left:1.5em;
+}
+
+
+*, html { line-height: 1.6em; }
+
+/* css for <header> */
+header { 
+	font-weight: bold /*normal*/; 
+	font-size:2em;
+	color: white;
+	background: #404040;
+	display: inline-block;
+	width: 100%;
+}
+
+#dashboard-title {
+	padding-left: 2%;
+}
+
+.options {
+	 float:right; 
+	 margin-top:.2em;
+	 margin-right: 2%;
+}
+
+	.options img {
+		height: auto;
+		opacity: .5;
+	}
+
+#triangle-menu {
+	width: 33px;
+}
+
+#gear {
+	width: 1.33em;
+}
+
+	#triangle-menu:hover,  #gear:hover {
+		cursor: pointer;
+		opacity: 1;
+	}
+
+#menu-box {
+	background-color: #fff;
+	border: 1px solid #C0C0C0;
+	position:absolute;
+	top: 3.6em;
+	right: .2em;
+	height: 10em;
+	width: 11em;
+	z-index: 100;
+}
+
+	#menu-box label {
+		font-size:.9em;
+		display:block;
+		padding-top:7%;
+		padding-left:13%
+	}
+
+		#menu-box label:hover {
+			font-weight:bold;
+			cursor:pointer;
+		}
+
+/*tabs start here--------------------------------------------------------------------------------*/
+.tabs {
+	position: relative;   
+	clear: both;
+}
+
+#tab-container {
+	position: relative;
+	display: inline-block;
+	padding-top: 33px;
+	z-index: 88;
+	width: 53px;
+	height: 100%;
+}
+
+.tab {
+	position: relative;
+	background: #E2E2E2;
+	margin-left: -14px;
+	width: 101px;
+	height: 35px;
+	border-radius:10px 10px 0px 0px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);    
+}
+
+	.tab, .tab label:hover {
+		cursor: pointer;
+	}
+		.tab p {
+			margin: 0;
+			height: 1em;
+		}
+
+			.tab p span {
+				padding: 2px;
+				position: relative;
+				top: 30%;
+				/*top: 22%;*/
+				left: 10%;
+				font-size: 1em;
+				font-weight: bold;
+				color: #404040;
+				vertical-align: middle;
+			}
+
+#left {
+	width: 53px;
+	background: #404040;
+	z-index: -1;
+	height: 100%;
+	top: 0;
+	position: fixed;
+}
+
+.content {
+	position: absolute;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	/*padding-bottom: 5em;*/
+}
+
+.close {
+	background: url('../Images/icons.png') no-repeat; 
+	background-position: -313px 0px;
+	width: 13px;
+	height: 13px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.2em /*0.5em*/;
+	margin-top: 0.5em;
+}
+/*tabs end here--------------------------------------------------------------------------------*/
+
+/*widget--------------*/
+
+.widget {
+	position: relative;
+	display: inline-block;
+	top: 1em;
+	left: 1.5em;
+	margin-right: 0.5em;
+	margin-bottom: 1em;
+	background-color: #fff;
+	height: 18.5em;
+	width: 20em;
+	border-radius: 15px 15px 15px 15px;
+	cursor: pointer;
+}
+
+.widget2x {
+	width: 41em;
+}
+	.widget .contents {
+		width: 92%;
+		height: 95%;
+		overflow: auto;
+	}
+
+.contents {
+	width: 95%;
+	margin-left: 0.9em;
+    margin-right: 0.9em;
+	margin-top: 0.3em;
+	display: inline-block;
+}
+
+	.contents .boxTitle {
+		font-size: 100%;
+		line-height: 1.6em;
+	}
+
+	.contents p {
+		font-size: 85%;
+		line-height: 1em;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	.contents span {
+		line-height: normal;
+	}
+
+.boxTitle {
+	font-weight: bold;
+}
+
+.page {
+	position: relative;
+	display: inline-table;
+	top: 1em;
+	left: 1.5em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	background-color: #fff;
+	border-radius: 15px 15px 15px 15px;
+	color: black;
+}
+
+
+.list-form {
+	padding: 5px;
+	color: #666;
+	/*border-style: solid;
+	border-width: 2px;
+	border-color: #666;*/
+	background-color: #FFF;
+	border-radius: 15px;
+	list-style-type: none;
+	border: 1px solid #AAA;
+}
+
+
+.list-form .item{
+	width: 120px;
+	display: inline-block;
+	text-align: right;
+}
+
+.list-form div{
+	
+	text-align: left;
+}
+
+/* Customer Information */
+#customInfo-widget p span:first-child {
+	font-weight: normal;
+}
+
+#customInfo-tab, #products-tab {
+	width: 123px;
+	height: 60px;
+}
+
+#customInfo-box {
+	width: 95%;
+	height: 100%;
+}
+
+.customInfo-page {
+	height: 30em;
+	width: 48%;
+	float: left;
+}
+
+#customInfo-box-left, #customInfo-box-right {
+    margin-bottom:10%;
+}
+
+	.customInfo-page .boxTitle {
+		color: gray;
+	}
+
+#customInfo_main p {
+	font-size: 100%;
+}
+
+#customInfo_other span {
+	font-weight: normal;
+}
+
+.contents-block {
+	padding-bottom: 0.5em;
+	padding-left: 0.5em;
+}
+
+.customInfo-page .contents p span:first-child {
+	font-weight: bold;
+}
+
+
+#permNotes {
+	width: 90%;
+	margin: 0;
+	padding-left: 1.7em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+	#permNotes li {
+		line-height: normal;
+		font-weight: bold;
+	}
+
+	#permNotes li span:nth-child(3) {
+		font-weight: normal;
+	}
+
+#products-title {
+	padding-top: 1em;
+}
+
+	#products-title + div + div p span:nth-child(2) {
+		font-weight: bold;
+	}
+
+#authorizedParties {
+	padding-left: 1em;
+	font-size: 85%;
+	margin-top: 0;
+}
+
+	#authorizedParties p span {
+		font-weight: normal;
+	}
+
+		#authorizedParties p span + span {
+			padding-left: 1em;
+		}
+
+#cpeContracts {
+	padding-left: 1em;
+}
+
+p.child_info {
+	font-size: 85%;
+	font-style: italic;
+	color: #0070C0;
+	margin-bottom: 0.3em;
+}
+
+	span.child_info_prodLink, span.parent_dashLink, span.permNote_link {
+		color: #0070C0;
+		text-decoration: underline;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+#permNotes_comments {
+	margin-top: 0.5em;
+	height: 110px;
+	width: 100%;
+	font-family: Arial, "Segoe UI", sans-serif;
+	font-size: 75%;
+}
+/*---- end of Customer Information ----*/
+
+
+/* Products & Services */
+#products-box, #facs-box {
+	width: 100%;
+	padding-bottom: 0;
+	height: 35em;
+}
+
+.products-page {
+	height: 100%;
+	width: 50%;
+	display: block;
+	float: left;
+}
+
+	.products-page .contents {
+		margin-left: 0;
+		height: 97%;
+		width: 100%;
+		overflow: auto;
+	}
+
+		.products-page .contents p {
+			font-size: 100%;
+		}
+
+.tree ul {
+	list-style: none outside none;
+	font-weight: normal;
+	padding-left: 0.5em;
+	word-wrap: break-word;
+	margin-right: 5%;
+	/*display: inline-block;*/
+}
+
+.tree li {
+	display: inline-block;
+}
+
+.tree li p {
+	line-height: 25px;
+	display: inline-block;
+}
+
+.tree > ul > li > p {
+	display: inline-block;
+	font-weight: normal;
+	position: relative;
+	text-decoration: none;
+}
+
+.tree li.parent > p {
+	cursor: pointer;
+	padding: 0 0 0 28px;
+}
+
+	.tree li.parent > p:before {
+		background: url('../Images/icons.png') no-repeat; 
+		background-position: -264px -72px;
+		content: "";
+		display: block;
+		height: 15px;
+		left: 5px;
+		position: absolute;
+		top: 5px;
+		vertical-align: middle;
+		width: 15px;
+	}
+
+.tree ul li.active > p {
+	font-weight: bold;
+}
+
+	.tree ul li.active > p:before {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+
+.tree ul li ul {
+	border-left: 1px solid #D9DADB;
+	display: none;
+	margin: 0 0 0 12px;
+	overflow: hidden;
+	padding: 0 0 0 25px;
+}
+
+/*.tree ul li br {
+	display: none;
+}*/
+
+	.tree ul li ul li {
+		position: relative;
+	}
+
+	.tree ul li ul li:before {
+		border-bottom: 1px dashed #E2E2E3;
+		content: "";
+		left: -20px;
+		position: absolute;
+		top: 12px;
+		width: 15px;
+	}
+
+.serviceComponents li:before, .levelComponents li:before {
+	border-bottom: 2px solid #919191 !important; 
+	width: 12px !important;
+}
+
+.showFacilities {
+	margin-left: 1%;
+	bottom: 4px;
+	border-bottom: 2px solid;
+	color: #0070C0;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.pics {
+	margin-left: 1%;
+	bottom: 4px;
+	border-bottom: 2px solid;
+	color: #0070C0;
+	display: inline-block;
+	font-weight: bold;
+}
+
+p.noProducts, #multiProducts {
+	font-size: 100%;
+	color: #8031C5;
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 1em;
+	line-height: normal;
+	margin-right: 5%;
+	display: inline-block;
+}
+
+#products-contents > p span:first-child, #facs-contents > p span:first-child {
+	font-weight: bold;
+}
+
+.serviceId {
+	word-wrap:break-word;
+	word-break: break-all;
+}
+
+#expand_item_label, #expand_anywhere_label {
+	font-weight: bold;
+	margin: 0;
+}
+
+.child_account_num {
+	color: #0070C0;
+	font-weight: bold;
+	bottom: 4px;
+	border-bottom: 2px solid;
+	cursor: pointer;
+}
+/*---- end of Products & Services ----*/
+
+/* Facilities */
+#facs-tab {
+	height: 38px;
+}
+
+#facs-box .page {
+	/*height: 43%;*/
+	width: 100%;
+	float: left;
+}
+
+#facs-box-left, #facs-box-right {
+    width: 46%;
+    display: inline-block;
+    float: left;
+}
+
+#facs-box-left {
+    margin-right: 1em;
+}
+
+#facs-box-right {
+    margin-bottom: 1em;
+}
+
+#facs-dropdown {
+	margin-left: 1em;
+	margin-top: 1em;
+}
+	#facs-dropdown > p, #facs-dropdown > select, #facs-dropdown > option {
+		display: inline;
+		font-weight: bold;
+	}
+
+	/*#facs-dropdown .paging-obj {
+		font-size: 95%;
+	}*/
+
+.paging-obj {
+	font-size: 100%;
+	font-family: Arial,"Segoe UI",sans-serif;
+}
+
+/*#facs-section-1, #facs-section-3 {
+	width: 55%;    
+}
+
+#facs-section-2 {
+	width: 35%;
+}*/
+
+#facs-box .boxTitle {
+	color: gray;
+}
+
+#facs-box .contents p {
+	font-size: 100%;
+}
+
+	#facs-box .contents p span:first-child {
+		font-weight: bold;
+	}
+
+/*---- end of Facilities ----*/
+
+/*css for billing overview widget*/
+#billing-contents {
+    font-size:.9em;
+}
+#billing-contents p:first-child {
+    padding-top:6px !important;
+    color:red !important;
+}
+
+#billing-contents p:first-child ,#billing-contents p:nth-child(3) {
+    background: #f1f0f0; 
+    padding:3px;
+}
+
+#billing-contents p:nth-child(2) {
+    background-color:#f9f9f9;
+    padding:5px;
+}
+
+#billing-contents div {
+    background-color:#f9f9f9;
+    padding:3px;
+    font-size:.88em;
+   
+}
+#billing-contents div div {
+   border-bottom: 1px dashed #eeeded;
+   
+}
+
+#billing-contents div div:last-child {
+    border-bottom:none !important;
+} 
+
+#remainingMonth {
+      overflow: scroll;
+      height: 200px;
+}
+/*---- end of billing overview widget ----*/
+
+/* Logout */
+#triangle-menu:hover {
+	cursor:pointer;
+}
+
+#gearMenu {
+	display:none;
+	background-color:#FFFFFF;
+	border:1px solid rgba(128, 128, 128, 0.84);
+	height:6em;
+	width:12em;
+	position:absolute;
+	right:0;
+	margin-right:3%;
+	z-index:9999999;
+}
+#gearMenu ul li {
+	text-align:justify;
+	font-weight:normal;
+	list-style-type:none;
+	font-size:1em;
+	margin-left:-17px;
+	margin-bottom:8px;
+}
+.menuItems {
+	text-decoration:none;
+	color:black;
+}
+
+#lblLogoff, #lblGoToCRM {
+	cursor:pointer;
+}
+	#gearMenu ul li span:hover, #lblLogoff:hover, #lblGoToCRM:hover {
+		font-weight:bold;
+	}
+/*---- end of Logout ----*/
+
+/* Context Menu */
+#expand_item, #expand_anywhere {
+	position: absolute;
+	background-color: #FFFFFF;
+	z-index: 999;
+	border: 1px solid rgb(153, 153, 153);
+	width: 13em;
+	font-size: 85%;
+}
+
+.contextMenu ul {
+	padding: 1px;
+	margin: 0;
+	list-style-type: none;                        
+}
+
+.contextMenu li {
+	padding: 3px;                       
+}
+
+.contextMenu li:hover {
+	background-color: #D9D9D9;
+}
+
+.expand_menu_label {
+	margin: 0;
+	font-weight: bold;
+}
+/*---- end of Context Menu ----*/
+
+
+
+/*information ticker css*/
+.infoTicker {
+    line-height: 10px;
+    font-weight:bold;
+    box-shadow: 0 0 5px #00214B;
+    position: fixed;
+   bottom: 0px;
+    height: 32px;
+    width: 100%;
+    padding-left:2%;
+    background-color:white;
+    z-index: 200;
+    }
+
+/***************************************************
+	Styles for Orders and Cases Widget and Detail
+***************************************************/
+#orders-box {
+	font-size: 0.90em;
+}
+/*
+#detailedOrders > tbody > tr > td,
+#RepairTickets > tbody > tr > td, 
+#ePapers > tbody > tr > td,
+#cct > tbody > tr > td,
+#billing_tbl > tbody > tr > td{
+	vertical-align: baseline;
+	text-align:center;
+} */
+
+.dataTable > tbody > tr > td {
+    vertical-align: baseline;
+	text-align:center;
+}
+
+#detailedOrders > tbody > tr > td.loaded,
+#ePapers > tbody > tr > td.loaded {
+    vertical-align: top;
+}
+
+.orderStyling {
+	width:85%;
+	padding:20px 30px 20px 20px;
+}
+
+#orders_cases-widget .contents{
+	width: 95%;
+}
+#orders_cases-widget div.contents div.wrapper,
+.orderStyling  div.contents div.wrapper {
+	font-size: 65%;
+	height: 90%;
+	overflow-y: auto;
+}
+
+.orderStyling div.contents div.wrapper {
+	font-size: 90%;
+}
+
+/***************************************************
+    Styles for Orders and Cases Detail row blocks
+***************************************************/
+/* Styles for order details of row*/
+#detailedOrders > tbody > tr > td .wrapper,
+#ePapers > tbody > tr > td .wrapper{
+    width: 330px;
+    height: initial;
+}
+
+#detailedOrders > tbody > tr > td .wrapper .service,
+#ePapers > tbody > tr > td .wrapper .service{
+    border-top: 1px solid #666;
+    overflow:hidden;
+}
+
+#detailedOrders > tbody > tr > td .wrapper .service:first-child,
+#ePapers > tbody > tr > td .wrapper .service:first-child{
+    border-top: none;
+}
+
+#detailedOrders > tbody > tr > td .service,
+#ePapers > tbody > tr > td .service {
+    width: 99%;
+    height: 80px;
+}
+#detailedOrders > tbody > tr > td .type,
+#ePapers > tbody > tr > td .type{
+    float: left;
+    font-size: 8px;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 30px 0px;
+    padding: 2px;
+    box-shadow: #666 2px 1px 2px;
+    width: 64px;
+    overflow:hidden;
+}
+#detailedOrders > tbody > tr > td .container,
+#ePapers > tbody > tr > td .container{
+    text-align: center;
+    display: inline-table;
+    padding: 20px 0px 0px 5px;
+    width: 75%;
+    vertical-align: middle;
+    float: left;
+}
+#detailedOrders > tbody > tr > td .tasks,
+#ePapers > tbody > tr > td .tasks{
+    height: 56px;
+    width: 32px;
+    display: inline-table;
+    font-size: 6pt; 
+}
+
+#detailedOrders > tbody > tr > td .done .boxlabel,
+#ePapers > tbody > tr > td .done .boxlabel {
+    border: 1px solid darkgreen;
+    background: #299a0b; /* Old browsers */
+    background: -moz-linear-gradient(top, #299a0b 0%, #bcdbc7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#299a0b), color-stop(100%,#bcdbc7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #299a0b 0%,#bcdbc7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #299a0b 0%,#bcdbc7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #299a0b 0%,#bcdbc7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #299a0b 0%,#bcdbc7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#299a0b', endColorstr='#bcdbc7',GradientType=0 ); /* IE6-9 */
+}
+
+#detailedOrders > tbody > tr > td .progress .boxlabel,
+#ePapers > tbody > tr > td .progress .boxlabel{
+    border: 1px solid #FFCC00;
+    background: rgb(244,216,0); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(244,216,0,1) 14%, rgba(255,245,151,1) 77%, rgba(255,245,151,1) 77%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(14%,rgba(244,216,0,1)), color-stop(77%,rgba(255,245,151,1)), color-stop(77%,rgba(255,245,151,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(244,216,0,1) 14%,rgba(255,245,151,1) 77%,rgba(255,245,151,1) 77%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(244,216,0,1) 14%,rgba(255,245,151,1) 77%,rgba(255,245,151,1) 77%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(244,216,0,1) 14%,rgba(255,245,151,1) 77%,rgba(255,245,151,1) 77%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(244,216,0,1) 14%,rgba(255,245,151,1) 77%,rgba(255,245,151,1) 77%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4d800', endColorstr='#fff597',GradientType=0 ); /* IE6-9 */
+}
+
+#detailedOrders > tbody > tr > td .service span,
+#ePapers > tbody > tr > td .service span{
+    font-size: 30px;
+    vertical-align: top;
+    display: inline-table;
+}
+#detailedOrders > tbody > tr > td .container span:last-child,
+#ePapers > tbody > tr > td .container span:last-child {
+    display: none;
+}
+
+.qtiphidden {
+    display: none;
+    max-height: 110px;
+    max-width: 250px;
+    overflow-y: auto;
+}
+
+.qtiphidden span{
+    font-weight: bold;
+}
+
+.qtiphidden div{
+    height: 5px;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 5px;
+}
+
+.qtiphidden div:last-child{
+    display: none;
+}
+
+.boxlabel {
+    border: 1px solid black;
+    box-shadow: #666 2px 1px 2px;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    margin-bottom: 4px;
+}
+
+.qtipCustom {
+    max-width: 180px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+/* end of styles for oder details of row*/
+
+/***************************************************
+   Styles for Billing Popup Dialog & Data table
+***************************************************/
+.billing-page .contents {
+    padding-right:20px;
+    width:950px;
+}
+
+.ui-widget-overlay {
+    background: #000;
+}
+.billDialog,
+.interacDialog {
+    font-size: 11pt;
+}
+.billDialog .lblPopupDialog {
+    width: 165px;
+}
+.interacDialog .lblPopupDialog{
+    width: 90px;
+}
+.lblPopupDialog {
+    padding: 4px;
+    display: inline-block;
+    text-align: right;
+}
+
+.billDialog .ui-dialog-titlebar-close,
+.order_caseDialog  .ui-dialog-titlebar-close,
+.interacDialog .ui-dialog-titlebar-close{
+  visibility: hidden;
+}
+
+.billinfo_header {
+    padding: 15px 10px;
+}
+
+.billinfo_header p{
+    line-height: 20px;
+}
+
+.billinfo_header p:first-child {
+    color: red;
+}
+
+.billinfo_header p span:first-child{
+    font-weight: bold;
+}
+.link_filters{
+    padding-left: 5px;
+    font-size: 13px;
+}
+.table_wrapper {
+    font-size: 12px;
+}
+.table_wrapper .no-record{
+    color: #0070C0;
+    font-style: italic;
+}
+
+/***************************************************
+ Styles for Interaction Notes Data table and Pop up
+***************************************************/
+#tbl_Interactions_info {
+    padding-bottom:10px;
+}
+/* End of Style */
+
+/* Styles for DataTable */
+
+.dataTable {
+	border: 1px solid #000;
+}
+.dataTable thead {
+	background-color: #b0b0b0;
+}
+
+/* End styles for DataTable */
+
+#ui-datepicker-div {
+    font-size: 12px;
+}
+
+/*---- end of Orders & Cases ----*/
+.warning{
+    margin-left:3.5em;
+    font-style:oblique;
+    color:#f00;
+    font-weight:bold;
+}
+
+.passed{
+    margin-left:3.5em;
+    font-style:oblique;
+    color:#008000;
+    font-weight:bold;
+}
+
+.onhold{
+    margin-left:3.5em;
+    font-style:oblique;
+    color:#9f7e00;
+    font-weight:bold;
+}
+
+.clrGreen{
+   color:#008000;
+   font-style:italic;
+   font-weight:bold;
+}
+
+.clrRed{
+   color:#f00;
+   font-weight:bold;
+   font-style:italic;
+}
+
+.msg{
+    color:#fff;
+    z-index:100;
+    font-size:1.05em;
+    font-weight:bold;
+}
+.msg-nodata{
+    color:#404040;
+    z-index:100;
+    position:absolute;
+    font-size:1.05em;
+    font-weight:bold;
+}
+progress.prog-incomplete::-webkit-progress-bar { background: #F2F2F2; }
+progress.prog-incomplete::-webkit-progress-value { background: #FE2E2E; }
+progress.prog-complete::-webkit-progress-bar { background:  #F2F2F2; }
+progress.prog-complete::-webkit-progress-value { background: #21610B; }
+
+@media only screen and (max-width: 859px) {
+	#customInfo-box {
+		width: 87%;
+	}
+
+	.customInfo-page {
+		width: 89%;
+		height: 33.5em;
+		margin-bottom: 2em;
+	}
+
+}
+
+@media only screen and (min-width: 860px) and (max-width: 928px) {
+	.customInfo-page {
+		width: 85%;
+	}
+
+	.showFacilities {
+		margin-left: 1em;
+	}
+}
+
+@media only screen and (min-width:219px) and (max-width:470px) {
+	/*#products-box,*/ #facs-box {
+		width: 85%;
+	}
+
+		#facs-box-left, #facs-box-right {
+			width: 90%;
+		}
+
+	#service-dropdown {
+		width: 92%;
+	}
+}
+
+@media only screen and (min-width:471px) and (max-width:600px) {
+	/*#products-box,*/ #facs-box {
+		width: 88%;
+	}
+		#facs-box-left, #facs-box-right {
+			width: 90%;
+		}
+
+	.showFacilities {
+		margin-left: 1em;
+	}
+}
+
+@media only screen and (min-width:601px) and (max-width:1070px) {
+	/*#products-box,*/ #facs-box {
+		width: 97%;
+	}
+
+	.showFacilities {
+		margin-left: 1em;
+	}
+}
+
+@media only screen and (min-width:1070px) {
+	.tree li p, .tree ul li ul, .tree li {
+		width: 98%;
+	}
+
+	.tree li p {
+		display: inline;
+	}
+}
+
+@media only screen and (min-width:975px) and (max-width:1270px){
+	.products-page {
+		width: 50%;
+	}
+}
+
+
+
+/*progress bar*/
+progress::-moz-progress-bar {background-color: red !important;}
+
+progress::-webkit-progress-value {background-color: red !important;}
+
+
+.progress-bar {
+  background-color: whiteSmoke;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+ /* width: 250px;*/
+ /* height: 20px;*/
+  
+  position: relative;
+  display: block;
+}
+  
+.progress-bar > span {
+  background-color: red;
+  border-radius: 2px;
+
+  display: block;
+  text-indent: -9999px;
+}
+/*progress bar*/
+
+.markHover tr > td > span:hover {
+    text-decoration:underline;
+}
+
+.permDialog{
+    font-size:0.9em;
+}
+
+.permDialog .ui-dialog-titlebar-close {
+    display:none;
+}

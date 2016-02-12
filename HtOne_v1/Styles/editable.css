@@ -1,0 +1,84 @@
+﻿/* Grid */
+
+.fruitGrid { 
+    /* structure */
+    width: 100%; 
+    padding: 5px; 
+    font-size: 12px;
+}
+
+.fruitGrid .headColumn { 
+    /* structure */
+    /*padding: 8px; */
+    
+    /* skin */
+    color: White;
+    background-color: #888;
+
+}
+
+.fruitGrid .row:nth-child(even) { 
+    /* skin */
+    background-color:#eee; 
+}
+
+.fruitGrid .rowItem { 
+    /* structure */
+    /*padding: 8px; */
+    vertical-align:top;
+}
+
+.deleteCheckBox { 
+    text-align:center;
+}
+
+.fruitGrid .rowItem .read   { 
+    /* structure */
+    display: block;
+    /*width: 130px;*/
+}
+
+.fruitGrid .tools { 
+    /* skin */
+    background-color:#ffffff;
+    padding: 10px;
+
+}
+
+/* Buttons */
+
+.button {
+    /* structure */
+    padding: 5px 10px;
+    
+    /* skin */
+    border: 1px solid gainsboro;
+    cursor: pointer;  
+    text-decoration: none; 
+}
+
+.addNewButton {
+    /* skin */
+    background-color: #003F72;   
+    /*background-image: -webkit-linear-gradient(top, #FDA352, #FB8F3D);*/
+    /*background-image: -moz-linear-gradient(top, #FDA352, #FB8F3D);*/
+   /*background-image: -ms-linear-gradient(top, #FDA352, #FB8F3D);*/ 
+    /*background-image: -o-linear-gradient(top, #FDA352, #FB8F3D);*/
+    /*background-image: linear-gradient(top, #FDA352, #FB8F3D);*/
+    color: White;
+}
+
+.toolButton {
+    /* skin */
+    background-color: #F9F9F9;
+    background-image: -webkit-linear-gradient(top, white, #F9F9F9);
+    background-image: -moz-linear-gradient(top, white, #F9F9F9);
+    background-image: -ms-linear-gradient(top, white, #F9F9F9);
+    background-image: -o-linear-gradient(top, white, #F9F9F9);
+    background-image: linear-gradient(top, white, #F9F9F9);
+    color: #444;
+}
+
+.validationLabel { display: block; }
+.validationMessage { color: Red; }
+.customMessage { color: Orange; }
